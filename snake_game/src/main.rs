@@ -2,13 +2,10 @@
 
 fn main() {
  
-    let message = String::from("Hello");
-    print_message(message);
+    let mut message = String::from("Hello");
+    let message_2: &mut String = &mut message;
+    message_2.push_str(" World");
+    println!("{}", message_2);
 
 }
 
-fn print_message(a: String) {
-    println!("{}",a);
-    let _c = &a;
-    println!("{}", _c)
-}
