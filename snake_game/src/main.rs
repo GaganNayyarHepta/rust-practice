@@ -1,13 +1,31 @@
 
+struct Person {
+    name: String,
+    last_name:String,
+    age: u32
+}
+
+impl Person {
+    fn some_function() {
+        println!("some_function")
+    }
+
+    fn change_age(&self) {
+        println!("Current age: {}", self.age);
+    }
+
+
+}
 
 fn main() {
-    let from = String::from("hello");
-    let mut message = from;
-    let name = "Filip";
+    let person = Person {
+        name: "gagan".to_string(),
+        last_name: "nayyar".to_string(),
+        age: 30,
+    };
 
-    message.push_str(" World");
+    person.change_age();
 
-    println!("{}", message);
-    println!("{}", name);
+    println!("{}", person.name);
 
 }
